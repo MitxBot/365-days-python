@@ -12,11 +12,11 @@ def baixar_video(url, qualidade="best", nome_saida="video"):
         nome_saida (str): Nome do arquivo de saída (sem extensão).
     """
 
-    # Define o formato com base na qualidade escolhida
+    #Define o formato com base na qualidade escolhida
     if qualidade.lower() in ["best", "worst"]:
         formato = qualidade
     else:
-        # Tenta pegar a resolução exata (ex: '720p' -> 'bestvideo[height=720]+bestaudio')
+        #Tenta pegar a resolução exata (ex: '720p' -> 'bestvideo[height=720]+bestaudio')
         try:
             altura = int(qualidade.replace("p", ""))
             formato = f"bestvideo[height={altura}]+bestaudio/best"
@@ -27,7 +27,7 @@ def baixar_video(url, qualidade="best", nome_saida="video"):
     opcoes = {
         'format': formato,
         'outtmpl': f'{nome_saida}.%(ext)s',
-        'merge_output_format': 'mp4',  # Garante saída em MP4
+        'merge_output_format': 'mp4',  #Garante saída em MP4
     }
 
     with yt_dlp.YoutubeDL(opcoes) as ydl:
