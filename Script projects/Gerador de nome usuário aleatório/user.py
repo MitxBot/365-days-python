@@ -1,10 +1,14 @@
 import random
 
+#Lista com os adjetivos usados para o nickname.
+
 adjetivos = [
     "Dark", "Swift", "Silent", "Shadow", "Crazy",
     "Lucky", "Epic", "Nova", "Frost", "Iron",
     "Blue", "Ghost", "Rapid", "Cyber", "Alpha"
 ]
+
+#Lista com os substantivos usados para o nickname.
 
 substantivos = [
     "Wolf", "Tiger", "Falcon", "Dragon", "Phoenix",
@@ -15,7 +19,7 @@ substantivos = [
 def gerar_usuario():
     adjetivo = random.choice(adjetivos)
     substantivo = random.choice(substantivos)
-    numero = random.randint(100,9999)
+    numero = random.randint(100,9999)#Define o alcance dos números que vira depois do nickname.Por exemplo:ShadowLion8418
 
     return f"{adjetivo}{substantivo}{numero}"
 
