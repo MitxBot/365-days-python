@@ -15,14 +15,14 @@ def analisar_texto(texto):
 
     palavras_unicas = len(set(palavras))
 
-    print("===== RESULTADO =====")
+    print("=== Resultado ===")
     print(f"Palavras: {quantidade_palavras}")
     print(f"Palavras únicas: {palavras_unicas}")
     print(f"Caracteres: {caracteres}")
     print(f"Caracteres (sem espaços): {caracteres_sem_espaços}")
 
 while True:
-    print("\n===== CONTADOR DE PALAVRAS =====")
+    print("\n=== Contador de Palavras ===")
     print("1 - Digitar um texto")
     print("2 - Ler texto de um arquivo (.txt)")
     print("3 - Sair")
