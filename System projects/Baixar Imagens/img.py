@@ -2,8 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import os
 
-#URL da página da web
-url_pagina = ""
+url_pagina = ""#URL da página
 
 #Pasta para salvar as imagens
 pasta_destino = ""
