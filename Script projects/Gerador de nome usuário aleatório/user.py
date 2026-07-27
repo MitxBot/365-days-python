@@ -16,12 +16,15 @@ substantivos = [
     "Lion", "Snake", "Bear", "Eagle", "Fox"
 ]
 
+simbolos = ["_",".",""]
+
 def gerar_usuario():
     adjetivo = random.choice(adjetivos)
     substantivo = random.choice(substantivos)
+    simbolo = random.choice(simbolos)
     numero = random.randint(100,9999)#Define o alcance dos números que vira depois do nickname.Por exemplo:ShadowLion8418
 
-    return f"{adjetivo}{substantivo}{numero}"
+    return f"{adjetivo}{simbolo}{substantivo}{numero}"
 
 while True:
     print("\n=== Gerador de Usuário ===")
