@@ -64,7 +64,7 @@ def nivel_senha(pontuacao):
         return "Muito fraca"
     
 print("=" * 40)
-print("=== Verificador de Senhas ===")
+print("=== Verificador de Senha ===")
 print("=" * 40)
 
 senha = input("Digite uma senha: ")
@@ -82,4 +82,4 @@ if problemas:
         print(f"- {problema}")
 
 else:
-    print("\nParabéns! Sua senha atende a todos os critérios de segurança.")
+    print("\nParabéns!Sua senha atende a todos os critérios de segurança.")

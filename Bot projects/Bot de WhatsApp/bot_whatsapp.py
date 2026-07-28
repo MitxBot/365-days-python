@@ -17,6 +17,4 @@ enviar_whatsapp(
 )
 """
 Esse método usa o WhatsApp Web (abre o navegador automaticamente).
-Necessário pywhatkit
-<<<pip install pywhatkit>>>
 """

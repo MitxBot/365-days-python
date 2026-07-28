@@ -22,6 +22,6 @@ def menu():
         enviar_whatsapp(numero,msg,hora,minuto)
     
     else:
-        print("Opção inválida")
+        print("Opção inválida!")
 
 menu()
