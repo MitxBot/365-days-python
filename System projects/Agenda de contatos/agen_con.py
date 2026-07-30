@@ -1,7 +1,7 @@
 agenda = []
 
 def adicionar_contato():
-    print("\n=== ADICIONAR CONTATO ===")
+    print("\n=== Adicionar Contato ===")
 
     nome = input("Nome: ")
     contato = input("Contato: ")
@@ -18,7 +18,7 @@ def adicionar_contato():
     print("Contato adicionado com sucesso!")
 
 def listar_contato():
-    print("\n=== LISTA DE CONTATOS ===")
+    print("\n=== Lista de Contatos ===")
 
     if not agenda:
         print("Nenhum contato cadastrado.")
@@ -31,7 +31,7 @@ def listar_contato():
         print(f"Email: {contato['email']}")
 
 def buscar_contato():
-    print("\n=== BUSCAR CONTATO ===")
+    print("\n=== Buscar Contato ===")
 
     nome_busca = input("Digite o nome do contato: ")
 
@@ -49,7 +49,7 @@ def buscar_contato():
         print("Contato não encontrado.")
 
 def remover_contato():
-    print("\n=== REMOVER CONTATO ===")
+    print("\n=== Remover Contato ===")
 
     nome_remover = input("Digite o nome do contato: ")
 
@@ -62,7 +62,7 @@ def remover_contato():
     print("Contato não encontrado.")
 
 while True:
-    print("\n===== AGENDA DE CONTATOS ====")
+    print("\n=== Agenda de Contatos ===")
     print("1 - Adicionar contato")
     print("2 - Listar contatos")
     print("3 - Buscar contato")
