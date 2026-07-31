@@ -111,7 +111,7 @@ def menu():
     banco = Banco()
 
     while True:
-        print("\n===== SISTEMA BANCÁRIO =====")
+        print("\n=== Sistema Bancário ===")
         print("1 - Criar conta")
         print("2 - Depositar")
         print("3 - Sacar")

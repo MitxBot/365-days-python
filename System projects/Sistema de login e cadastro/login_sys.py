@@ -16,7 +16,7 @@ def cadastrar():
     print("Cadastro realizado com sucesso!")
 
 def login():
-    print(f"\n=== LOGIN ===")
+    print(f"\n=== Login ===")
 
     usuario = input("Usuário: ")
     senha = input("Senha: ")
@@ -37,7 +37,7 @@ def listar_usuarios():
         print(usuario)
 
 while True:
-    print(f"\n===== SISTEMA =====")
+    print(f"\n=== Sistema ===")
     print("1 - Cadastrar")
     print("2 - Login")
     print("3 - Listar usuários")

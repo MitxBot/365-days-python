@@ -86,7 +86,7 @@ class GerenciadorTarefas:
 
 def menu():
         print("""
-==== GERENCIADOR DE TAREFAS ====
+=== Gerenciador de Tarefas ===
 1. Adicionar tarefa
 2. Listar tarefas
 3. Ver detalhes

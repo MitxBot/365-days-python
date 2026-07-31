@@ -1,7 +1,7 @@
 tarefas = []
 
 def adicionar_tarefa():
-    print("\n=== ADICIONAR TAREFA ===")
+    print("\n=== Adicionar Tarefa ===")
 
     titulo = input("Digite a tarefa: ")
 
@@ -15,7 +15,7 @@ def adicionar_tarefa():
     print("Tarefa adicionada com sucesso!")
 
 def listar_tarefas():
-    print("\n=== LISTA DE TAREFAS ===")
+    print("\n=== Lista de Tarefas ===")
 
     if not tarefas:
         print("Nenhuma tarefa cadastrada.")
@@ -28,7 +28,7 @@ def listar_tarefas():
         print(f"{i}. [{status}] {tarefa['titulo']}")
 
 def concluir_tarefa():
-    print("\n=== CONCLUIR TAREFA ===")
+    print("\n=== Concluir Tarefa ===")
 
     listar_tarefas()
 
@@ -49,7 +49,7 @@ def concluir_tarefa():
         print("Digite apenas números")
 
 def remover_tarefa():
-    print("\n=== REMOVER TAREFA ===")
+    print("\n=== Remover Tarefa ===")
 
     listar_tarefas()
 
@@ -70,7 +70,7 @@ def remover_tarefa():
         print("Digite apenas números.")
 
 while True:
-    print("\n===== TO-DO LIST =====")
+    print("\n=== TO-DO List ===")
     print("1 - Adicionar tarefa")
     print("2 - Listar tarefas")
     print("3 - Concluir tarefa")
