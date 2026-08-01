@@ -1,7 +1,7 @@
 usuarios = {}
 
 def cadastrar():
-    print(f"\n=== CADASTRO ===")
+    print(f"\n=== Cadastro ===")
     
     usuario = input("Digite um nome de usuário: ")
     
@@ -27,7 +27,7 @@ def login():
         print(f"Usuário ou senha incorretos!")
 
 def listar_usuarios():
-    print(f"\n=== USUÁRIOS CADASTRADOS ===")
+    print(f"\n=== Usuários Cadastrados ===")
 
     if not usuarios:
         print("Nenhum usuário cadastrado.")
