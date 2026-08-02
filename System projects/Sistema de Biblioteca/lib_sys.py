@@ -69,7 +69,7 @@ class Biblioteca:
 
             if livro.disponivel:
                 livro.disponivel = True
-                print("\nLivro devolvido com sucesso!\n")
+                print("\nLivro devolvido com sucesso.\n")
             else:
                 print("\nLivro já está disponível.\n")
 
