@@ -124,3 +124,45 @@ def excluir_pokemon():
 
     else:
         print("Pokémon não encontrado.")
+
+#Menu
+
+while True:
+    print("""
+========= Pokédex =========
+
+1 - Adicionar Pokémon
+2 - Listar Pokémon
+3 - Procurar Pokémon
+4 - Atualizar Pokémon
+5 - Excluir Pokémon
+0 - Sair
+
+===========================
+""")
+
+    opcao = input("Digite uma opção: ")
+
+    if opcao == "1":
+        adicionar_pokemon()
+
+    elif opcao == "2":
+        listar_pokemon()
+
+    elif opcao == "3":
+        procurar_pokemon()
+
+    elif opcao == "4":
+        atualizar_pokemon()
+
+    elif opcao == "5":
+        excluir_pokemon()
+
+    elif opcao == "0":
+        print("Encerrando Pokédex...")
+        break
+
+    else:
+        print("Erro,Opção inválida!")
+
+conexao.close()
