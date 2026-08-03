@@ -1,6 +1,6 @@
 import sqlite3
 
-#Conecta(ou cria)o banco de dados
+#Conecta ou cria o banco de dados
 
 conexao = sqlite3.connect("pokedex.db")
 cursor = conexao.cursor()
@@ -72,3 +72,55 @@ def procurar_pokemon():
     )
 
     pokemon = cursor.fetchone()
+
+    if pokemon:
+        print("\nPokémon encontrado!")
+        print(f"ID: {pokemon[0]}")
+        print(f"Nome: {pokemon[1]}")
+        print(f"Tipo 1: {pokemon[2]}")
+        print(f"Tipo 2: {pokemon[3]}")
+        print(f"HP: {pokemon[4]}")
+        print(f"Ataque: {pokemon[5]}")
+        print(f"Defesa: {pokemon[6]}")
+
+    else:
+        print("Pokémon encontrado!")
+
+def atualizar_pokemon():
+    nome = input("\nNome do Pokémon que deseja atualizar: ").title()
+
+    cursor.execute(
+        "SELECT * FROM pokedex WHERE nome = ?",
+        (nome,)
+    )
+
+    pokemon = cursor.fetchone()
+
+    if not pokemon:
+        print("Pokémon não encontrado.")
+        return
+
+    print("Digite os novos dados.")
+
+    tipo1 = input("Tipo 1: ").title()
+    tipo2 = input("Tipo 2: ").title()
+
+    hp = int(input("HP: "))
+    ataque = int(input("Ataque: "))
+    defesa = int(input("Defesa: "))
+
+def excluir_pokemon():
+    nome = input("\nNome do Pokémon: ").title()
+
+    cursor.execute(
+        "DELETE FROM pokedex WHERE nome = ?",
+        (nome,)
+    )
+
+    conexao.commit()
+
+    if cursor.rowcount:
+        print("Pokémon removido.")
+
+    else:
+        print("Pokémon não encontrado.")
