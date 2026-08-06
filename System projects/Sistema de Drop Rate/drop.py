@@ -10,10 +10,10 @@ raridades = [
 ]
 
 probalidades = [
-    55,  # Comum
-    35,  # Rare
-    7.5, # Super Rare
-    2.5  # Ultra Rare
+    55,  #Comum
+    35,  #Rare
+    7.5, #Super Rare
+    2.5  #Ultra Rare
 ]
 
 #Contador de raridades obtidas
