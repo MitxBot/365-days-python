@@ -117,3 +117,106 @@ def filtrar(monstros):
 
     if not encontrados:
         print("Nenhum encontrado.")
+
+#Editar
+
+def editar(monstros):
+
+    nome = input("Nome do monstro: ").strip().lower()
+
+    for m in monstros:
+
+        if m["Nome"].lower() == nome:
+
+            print("Deixe vazio para manter o valor.")
+
+            novo = input(f'Novo HP ({m["HP"]}): ')
+
+            if novo:
+                m["HP"] = int(novo)
+
+            novo = input(f'Novo ataque ({m["Ataque"]}): ')
+
+            if novo:
+                m["Ataque"] == int(novo)
+
+            novo = input(f'Nova defesa ({m["Defesa"]}):')
+
+            if novo:
+                m["Defesa"] == int(novo)
+
+            salvar(monstros)
+
+            print("Monstro atualizado!")
+
+            return
+
+    print("Monstro não encontrado.")
+
+#Excluir
+
+def excluir(monstros):
+
+    nome = input("Nome do monstro: ").strip().lower()
+
+    for m in monstros:
+
+        if m["Nome"].lower() == nome:
+
+            monstros.remove(m)
+
+            salvar(monstros)
+
+            print("Monstro removido.")
+
+            return
+
+    print("Monstro não encontrado.")
+
+#Menu
+
+def menu():
+
+    monstros = carregar()
+
+    while True:
+
+        print("""
+======== Bestiário ========
+1 - Registrar monstro
+2 - Listar monstros
+3 - Buscar por nome
+4 - Filtrar por tipo
+5 - Editar
+6 - Excluir
+0 - Sair
+""")
+
+        opcao = input("Digite uma opção: ")
+
+        if opcao == "1":
+            registrar(monstros)
+
+        elif opcao == "2":
+            listar(monstros)
+
+        elif opcao == "3":
+            buscar(monstros)
+
+        elif opcao == "4":
+            filtrar(monstros)
+
+        elif opcao == "5":
+            editar(monstros)
+
+        elif opcao == "6":
+            excluir(monstros)
+
+        elif opcao == "0":
+            print("Encerrando o programa...")
+            break
+
+        else:
+            print("Erro,opção inválida!")
+
+menu()
