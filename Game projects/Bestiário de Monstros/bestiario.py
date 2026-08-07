@@ -10,7 +10,8 @@ def carregar():
     if os.path.exists(ARQUIVO):
         with open(ARQUIVO,"r",encoding="utf-8") as f:
             return json.load(f)
-        return []
+
+    return []
 
 def salvar(monstros):
 
@@ -28,9 +29,9 @@ def registrar(monstros):
 
     hp = int(input("HP: "))
 
-    ataque = int(input("ATk: "))
+    ataque = int(input("Ataque: "))
 
-    defesa = int(input("DEF: "))
+    defesa = int(input("Defesa: "))
 
     habilidade = input("Habilidade: ").strip()
 
@@ -72,8 +73,8 @@ def listar(monstros):
 {i}.{m["Nome"]}
 Tipo: {m["Tipo"]}
 HP: {m["HP"]}
-Ataque: {m["ATK"]}
-Defesa: {m["DEF"]}
+Ataque: {m["Ataque"]}
+Defesa: {m["Defesa"]}
 Habilidade: {m["Habilidade"]}
 Rank: {m["Rank"]}
 Descrição: {m["Descrição"]}
@@ -103,15 +104,15 @@ def buscar(monstros):
 
 def filtrar(monstros):
 
-    tipo = input("Tipo: ").strip().lower()
+    tipo = input("Tipo").strip().lower()
 
     encontrados = False
 
     for m in monstros:
 
-        if m["Tipo: "].lower() == tipo:
+        if m["Tipo"].lower() == tipo:
 
-            print(f'-{m["Nome:"]}')
+            print(f'-{m["Nome"]}')
 
             encontrados = True
 
@@ -138,16 +139,16 @@ def editar(monstros):
             novo = input(f'Novo ataque ({m["Ataque"]}): ')
 
             if novo:
-                m["Ataque"] == int(novo)
+                m["Ataque"] = int(novo)
 
             novo = input(f'Nova defesa ({m["Defesa"]}):')
 
             if novo:
-                m["Defesa"] == int(novo)
+                m["Defesa"] = int(novo)
 
             salvar(monstros)
 
-            print("Monstro atualizado!")
+            print("Monstro atualizado com sucesso!")
 
             return
 
