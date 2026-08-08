@@ -117,7 +117,7 @@ def filtrar(monstros):
             encontrados = True
 
     if not encontrados:
-        print("Nenhum encontrado.")
+        print("Nenhum monstro encontrado.")
 
 #Editar
 
