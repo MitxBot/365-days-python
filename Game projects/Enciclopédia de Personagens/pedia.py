@@ -64,3 +64,19 @@ def listar(personagens):
     if not personagens:
         print("\nNenhum personagem registrado.")
         return
+
+    print("\n===== Enciclopédia =====")
+
+    for i,personagem in enumerate(personagens, start=1):
+
+        print(f"""
+{i}. {personagem["Nome"]}
+Obra: {personagem["Obra"]}
+Espécie: {personagem["Espécie"]}
+Gênero: {personagem["Gênero"]}
+Idade: {personagem["Idade"]}
+Ocupação: {personagem["Ocupação"]}
+Personalidade: {personagem["Personalidade"]}
+Habilidade: {personagem["Habilidade"]}
+Descrição: {personagem["Descrição"]}
+""")
