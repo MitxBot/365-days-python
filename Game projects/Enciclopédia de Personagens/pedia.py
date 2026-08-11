@@ -56,3 +56,11 @@ def registrar(personagens):
     salvar(personagens)
 
     print("\nPersonagem cadastrado com sucesso!")
+
+#Listar
+
+def listar(personagens):
+
+    if not personagens:
+        print("\nNenhum personagem registrado.")
+        return
