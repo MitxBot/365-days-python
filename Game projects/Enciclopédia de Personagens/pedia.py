@@ -80,3 +80,7 @@ Personalidade: {personagem["Personalidade"]}
 Habilidade: {personagem["Habilidade"]}
 Descrição: {personagem["Descrição"]}
 """)
+
+#Buscar por Nome
+
+def buscar(personagens):
