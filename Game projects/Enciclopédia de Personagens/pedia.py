@@ -157,3 +157,85 @@ def filtrar_especie(personagens):
         
     for personagem in encontrados:
         print(f"- {personagem['Nome']}")
+
+#Editar
+
+def editar(personagens):
+
+    pesquisa = input("Digite o nome do personagem: ").strip().lower()
+
+    for personagem in personagens:
+
+        if personagem["Nome"].lower() == pesquisa:
+
+            print("\nDeixe vazio para manter o valor atual.")
+
+            novo_nome = input(
+                f"Nome: ({personagem['Nome']}): "
+            )
+
+            if novo_nome:
+                personagem["Nome"] = novo_nome
+
+            nova_obra = input(
+                f"Obra: ({personagem['Obra']}): "
+            )
+
+            if nova_obra:
+                personagem["Obra"] = nova_obra
+
+            nova_especie = input(
+                f"Espécie: ({personagem['Espécie']}): "
+            )
+
+            if nova_especie:
+                personagem["Espécie"] = nova_especie
+
+            novo_genero = input(
+                f"Gênero: ({personagem['Gênero']}): "
+            )
+
+            if novo_genero:
+                personagem["Gênero"] = novo_genero
+
+            nova_idade = input(
+                f"Idade: ({personagem['Idade']}): "
+            )
+
+            if nova_idade:
+                personagem["Idade"] = nova_idade
+
+            nova_ocupacao = input(
+                f"Ocupação: ({personagem['Ocupação']}): "
+            )
+
+            if nova_ocupacao:
+                personagem["Ocupação"] = nova_ocupacao
+
+            nova_personalidade = input(
+                f"Pesonalidade: ({personagem['Personalidade']}): "
+            )
+
+            if nova_personalidade:
+                personagem["Personalidade"] = nova_personalidade
+
+            nova_habilidade = input(
+                f"Habilidade: ({personagem['Habilidade']}): "
+            )
+
+            if nova_habilidade:
+                personagem["Habilidade"] = nova_habilidade
+
+            nova_descricao = input(
+                f"Descrição: ({personagem['Descrição']}): "
+            )
+
+            if nova_descricao:
+                personagem["Descrição"] = nova_descricao
+
+            salvar(personagens)
+
+            print("\nPersonagem atualizado!")
+
+            return
+    print("\nPersonagem não encontrado.")
