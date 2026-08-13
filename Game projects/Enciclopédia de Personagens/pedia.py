@@ -84,3 +84,76 @@ Descrição: {personagem["Descrição"]}
 #Buscar por Nome
 
 def buscar(personagens):
+
+    pesquisa = input("\nDigite o nome: ").strip().lower()
+
+    encontrados = []
+
+    for personagem in personagens:
+
+        if pesquisa in personagem["Nome"].lower():
+            encontrados.append(personagem)
+
+    if not encontrados:
+            print("\nNenhum personagem encontrado.")
+            return
+
+    print("\n===== Resultados =====")
+
+    for personagem in encontrados:
+
+        print(f"""
+Nome: {personagem["Nome"]}
+Obra: {personagem["Obra"]}
+Espécie: {personagem["Espécie"]}
+Gênero: {personagem["Gênero"]}
+Idade: {personagem["Idade"]}
+Ocupação: {personagem["Ocupação"]}
+Personalidade: {personagem["Personalidade"]}
+Habilidade: {personagem["Habilidade"]}
+Descrição: {personagem["Descrição"]}
+""")
+
+#Filtrar por Obra
+
+def filtrar_obar(personagens):
+
+    obra = input("Digite a obra").strip().lower()
+
+    encontrados = []
+    
+    for personagem in personagens:
+    
+        if personagem["Obra"].lower() == obra:
+            encontrados.append(personagem)
+    
+    if not encontrados:
+        print("\nNenhum personagem encontrado nessa obra.")
+        return
+    
+    print("\n===== Personagens =====")
+    
+    for personagem in encontrados:
+        print(f"- {personagem['Nome']}")
+
+#Filtrar por Espécies
+
+def filtrar_especie(personagens):
+
+    especie = input("\nDigite a espécie: ").strip().lower()
+
+    encontrados = []
+        
+    for personagem in personagens:
+        
+        if personagem["Espécie"].lower() == especie:
+            encontrados.append(personagem)
+        
+    if not encontrados:
+        print("\nNenhum personagem encontrado.")
+        return
+        
+    print("\n===== Personagens =====")
+        
+    for personagem in encontrados:
+        print(f"- {personagem['Nome']}")
