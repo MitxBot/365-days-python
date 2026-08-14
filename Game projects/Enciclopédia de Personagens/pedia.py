@@ -239,3 +239,23 @@ def editar(personagens):
 
             return
     print("\nPersonagem não encontrado.")
+
+#Excluir
+
+def excluir(personagens):
+
+    pesquisa = input("\nDigite o nome do personagem: ").strip().lower()
+
+    for personagem in personagens:
+
+        if personagem["Nome"].lower() == pesquisa:
+
+            personagens.remove(personagem)
+
+            salvar(personagens)
+
+            print("\nPersonagem excluído com sucesso!")
+
+            return
+
+    print("\nPersonagem não encontrado.")
