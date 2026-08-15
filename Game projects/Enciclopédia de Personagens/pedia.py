@@ -116,7 +116,7 @@ Descrição: {personagem["Descrição"]}
 
 #Filtrar por Obra
 
-def filtrar_obar(personagens):
+def filtrar_obra(personagens):
 
     obra = input("Digite a obra").strip().lower()
 
@@ -259,3 +259,61 @@ def excluir(personagens):
             return
 
     print("\nPersonagem não encontrado.")
+
+#Menu
+
+def menu():
+
+    personagens = carregar()
+
+    while True:
+
+        print("""
+
+==================================
+       ENCICLOPÉDIA DE PERSONAGENS
+==================================
+
+1 - Cadastrar personagem
+2 - Listar personagens
+3 - Buscar por nome
+4 - Filtrar por obra
+5 - Filtrar por espécie
+6 - Editar personagem
+7 - Excluir personagem
+0 - Sair
+
+==================================
+""")
+
+        opcao = input("Digite uma opção: ").strip()
+
+        if opcao == "1":
+            registrar(personagens)
+
+        elif opcao == "2":
+            listar(personagens)
+
+        elif opcao == "3":
+            buscar(personagens)
+
+        elif opcao == "4":
+            filtrar_obra(personagens)
+
+        elif opcao == "5":
+            filtrar_especie(personagens)
+
+        elif opcao == 6:
+            editar(personagens)
+
+        elif opcao == "7":
+            excluir(personagens)
+
+        elif opcao == "0":
+            print("\nEncerrando o programa...")
+            break
+
+        else:
+            print("\nErro,opção inválida")
+
+menu()
