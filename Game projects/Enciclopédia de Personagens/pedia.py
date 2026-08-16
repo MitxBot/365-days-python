@@ -271,10 +271,10 @@ def menu():
         print("""
 
 ==================================
-       ENCICLOPÉDIA DE PERSONAGENS
+       Enciclopédia de Personagens
 ==================================
 
-1 - Cadastrar personagem
+1 - Registrar personagem
 2 - Listar personagens
 3 - Buscar por nome
 4 - Filtrar por obra
