@@ -80,7 +80,7 @@ def battle(creature1,creature2):
 
             turn += 1
 
-#===== TESTE =====
+#Teste
 
 #Ataques
 
