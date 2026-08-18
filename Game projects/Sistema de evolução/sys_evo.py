@@ -64,7 +64,7 @@ def evolve(creature,new_name):
     creature.name = new_name
     return creature
 
-#===== TESTE =====
+#Teste
 
 creature = Creature("Flameling")
 

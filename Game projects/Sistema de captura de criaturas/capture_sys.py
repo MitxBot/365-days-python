@@ -11,7 +11,7 @@ class Creature:
         if self.hp < 1:
             self.hp = 1 #Não deixa morrer (estilo Pokémon)
     
-#tipos de bolas
+#Tipos de bolas
 
 balls = {
     "normal" : 1.0,
@@ -43,7 +43,7 @@ def try_capture(creature,ball_type):
         print("A criatura escapou!")
         return False
 
-#===== TESTE =====
+#Teste
 
 wild = Creature("Aquabub",50)
 

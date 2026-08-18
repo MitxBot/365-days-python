@@ -51,7 +51,7 @@ Ataque: {self.attack}
 Defesa: {self.defense}
 """)
         
-#--- Teste do sistema ---
+#Teste do sistema
 
 player = Player("Herói")
 
