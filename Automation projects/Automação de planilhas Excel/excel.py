@@ -1,10 +1,10 @@
 from openpyxl import load_workbook
 
-#Abre a planilha
+#Abre a Planilha
 
-planilha = load_workbook("")#Nome do arquivo
+planilha = load_workbook("")#Nome do Arquivo
 
-#Seleciona a aba ativa
+#Seleciona a Aba Ativa
 
 aba = planilha.active
 
@@ -12,7 +12,7 @@ aba = planilha.active
 
 aba [""] = ""
 
-#Percorre as linhas
+#Percorre as Linhas
 
 for linha in range(2,aba.max_row +1):
     quantidade = aba[f"B{linha}"].value
@@ -22,7 +22,7 @@ for linha in range(2,aba.max_row +1):
 
     aba[f"D{linha}"] = total
 
-#Salva as alterações
+#Salva as Alterações
 
 planilha.save("")#Nome do arquivo
 

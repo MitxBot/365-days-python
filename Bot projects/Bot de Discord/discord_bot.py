@@ -3,7 +3,7 @@ from discord.ext import commands
 import random
 import sqlite3
 
-#===== CONFIG =====
+#Config
 
 TOKEN = "SEU_TOKEN_AQUI"
 intents = discord.Intentes.default()
@@ -11,7 +11,7 @@ intents.message_content() = True
 
 bot = commands.Bot(command_prefix="!",intents=intents)
 
-#===== BANCO DE DADOS =====
+#Banco de Dados
 
 conn = sqlite3.connect("database.db")
 cursor = conn.cursor()
@@ -38,13 +38,13 @@ def add_points(user_id,amount):
     cursor.execute("UPDATE user SET points = ? WHERE user_id = ?",(points,user_id))
     conn.commit()
 
-#===== EVENTO =====
+#Evento
 
 @bot.event
 async def on_ready():
     print(f"Bot online como: {bot.user}")
 
-#===== SISTEMA DE XP AUTOMÁTICO =====
+#Sistem de XP Automático 
 
 @bot.event
 async def on_message(message):
@@ -54,7 +54,7 @@ async def on_message(message):
     add_points(message.author.id,5) #Ganha XP por mensagem
     await bot.process_commands(message)
 
-#===== COMANDOS =====
+#Comandos
 
 #Ver pontos
 
@@ -77,7 +77,7 @@ async def ranking(ctx):
     
     await ctx.send(msg)
 
-#===== MINI-JOGOS =====
+#Mini-Games
 
 #Cara ou coroa
 
@@ -98,7 +98,7 @@ async def adivinhar(ctx,numeor:int):
     else:
         await ctx.send(f"Errou! Era {bot_num}")
 
-#Pedra, papel, tesoura
+#Pedra, Papel, Tesoura
 
 @bot.command()
 async def ppt(ctx,escolha:str):
@@ -119,7 +119,7 @@ async def ppt(ctx,escolha:str):
     else:
         await ctx.send(f"Você perdeu! {escolha} vs {bot_escolha}")
 
-#===== COMANDO DE AJUDA =====
+#Comando de Ajuda
 
 @bot.command()
 async def ajuda(ctx):
@@ -132,5 +132,5 @@ Comandos:
 !ppt <pedra/papel/tesoura>
 """)
 
-#===== RODAR BOT =====
+#Rodar o Bot
 bot.run(TOKEN)

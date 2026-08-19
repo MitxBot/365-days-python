@@ -47,7 +47,7 @@ def try_capture(creature,ball_type):
 
 wild = Creature("Aquabub",50)
 
-#simula batalha
+#Simula Batalha
 
 wild.take_damage(30)
 

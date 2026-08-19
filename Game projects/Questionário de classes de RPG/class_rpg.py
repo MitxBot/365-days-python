@@ -53,7 +53,7 @@ def mostrar_resultado():
     print(descricoes[melhor_classe])
 
 def main():
-    print("=== Questionário de Classe RPG ===")
+    print("===== Questionário de Classe RPG =====")
 
     #Pergunta 1
 

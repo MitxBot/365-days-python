@@ -72,7 +72,7 @@ def main():
     pokedex.load_from_file()
 
     while True:
-        print("\n ===== MENU ===== ")
+        print("\n ===== Menu ===== ")
         print("1. Adicionar criatura")
         print("2. Listar criaturas")
         print("3. Buscar por nome")

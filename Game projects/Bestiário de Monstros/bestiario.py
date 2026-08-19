@@ -21,7 +21,7 @@ def salvar(monstros):
 #Registrar
 
 def registrar(monstros):
-    print("\n=== Novo Monstro ===")
+    print("\n===== Novo Monstro =====")
 
     nome = input("Nome: ").strip()
 
@@ -183,7 +183,7 @@ def menu():
     while True:
 
         print("""
-======== Bestiário ========
+===== Bestiário =====
 1 - Registrar monstro
 2 - Listar monstros
 3 - Buscar por nome

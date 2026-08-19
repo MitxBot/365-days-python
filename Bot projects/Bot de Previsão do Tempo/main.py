@@ -35,7 +35,7 @@ def obter_clima(cidade):
     print("=" * 40)
 
 def main():
-    print("=== Bot de Previsão do Tempo ===")
+    print("===== Bot de Previsão do Tempo =====")
 
     while True:
         cidade = input("\nDigite o nome da cidade (ou 'sair' para encerrar): ")

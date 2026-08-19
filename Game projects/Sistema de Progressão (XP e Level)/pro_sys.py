@@ -27,17 +27,17 @@ class Player:
         self.level += 1
         print(f"\nLEVEL UP! Agora você é nível {self.level}!")
 
-        #Aumenta atributos
+        #Aumenta Atributos
 
         self.hp += 20
         self.attack += 5
         self.defense += 3
 
-        #Recalcula XP necessário
+        #Recalcula XP Necessário
 
         self.xp_to_next = self.calculate_xp()
 
-        #Mostra status
+        #Mostra Status
 
         self.show_status()
 
@@ -51,13 +51,13 @@ Ataque: {self.attack}
 Defesa: {self.defense}
 """)
         
-#Teste do sistema
+#Teste do Sistema
 
 player = Player("Herói")
 
 player.show_status()
 
-#Simulando batalhas
+#Simulando Batalhas
 
 player.gain_xp(50)
 player.gain_xp(80)

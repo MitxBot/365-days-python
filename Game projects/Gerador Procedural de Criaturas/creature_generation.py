@@ -1,6 +1,6 @@
 import random
 
-#===== DADOS BASE =====
+#Dados base
 
 prefixes = ["Pyro","Aqua","Terra","Volt","Shadow","Lumi","Frost"]
 sufixes = ["ling","zor","mon","drake","beast","gon","nix"]
@@ -19,7 +19,7 @@ abilities = {
 
 rarities = ["Common","Rare","Epic","Legendary"]
 
-#===== CLASSE =====
+#Classe
 
 class Creature:
     def __init__(self,name,type_,hp,attack,defense,ability,rarity,description):
@@ -41,7 +41,7 @@ class Creature:
         print(f"Raridade: {self.rarity}")
         print(f"Descrição: {self.description}")
 
-#===== GERADOR =====
+#Gerador
 
 def generate_name():
     return random.choice(prefixes) + random.choice(sufixes)
@@ -84,7 +84,7 @@ def generate_creature():
 
     return Creature(name,type_,hp,attack,defense,ability,rarity,description)
 
-#===== TESTE =====
+#Teste
 
 for _ in range(3):
     c = generate_creature()

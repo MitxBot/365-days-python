@@ -52,7 +52,7 @@ def criar_classe():
                 except ValueError:
                     print("Digite apenas números!")
         
-        print("=== Criador de Classe ===")
+        print("===== Criador de Classe =====")
 
         nome = input("Nome da classe: ")
 

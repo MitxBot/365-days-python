@@ -23,7 +23,7 @@ conexao.commit()
 #Funções
 
 def adicionar_pokemon():
-    print("\n=== Novo Pokémon ===")
+    print("\n===== Novo Pokémon =====")
 
     nome = input("Nome: ").title()
     tipo1 = input("Tipo 1: ").title()

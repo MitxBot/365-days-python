@@ -64,7 +64,7 @@ def nivel_senha(pontuacao):
         return "Muito fraca"
     
 print("=" * 40)
-print("=== Verificador de Senha ===")
+print("===== Verificador de Senha =====")
 print("=" * 40)
 
 senha = input("Digite uma senha: ")

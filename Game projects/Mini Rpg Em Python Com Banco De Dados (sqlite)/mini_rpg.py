@@ -1,12 +1,7 @@
-#Mini RPG em Python com SQLite
-#Tema: Bestiário + Combate simples
-
 import sqlite3
 import random
 
-# =========================
-# BANCO DE DADOS
-# =========================
+#Banco de Dados
 
 conn = sqlite3.connect("rpg.db")
 cursor = conn.cursor()
@@ -22,9 +17,7 @@ CREATE TABLE IF NOT EXISTS monstros(
 
 conn.commit()
 
-# =========================
-# INSERIR MONSTROS
-# =========================
+#Inserir Monstros
 
 def adicionar_monstro(nome,hp,ataque):
     cursor.execute(
@@ -41,17 +34,13 @@ if cursor.fetchone()[0] == 0:
     adicionar_monstro("Goblin",20,5)
     adicionar_monstro("Dragão",100,20)
 
-# =========================
-# LISTAR MONSTROS
-# =========================
+#Listar Monstros
 
 def listar_monstros():
     cursor.execute("SELECT (*) FROM monstros")
     return cursor.fetchall()
 
-# =========================
-# SISTEMA DE COMBATE
-# =========================
+#Sistema de Combate
 
 def batalhar():
     monstro = listar_monstros()
@@ -84,20 +73,18 @@ def batalhar():
     else:
         print(f"\n Você foi derrotado...")
 
-# =========================
-# MENU PRINCIPAL
-# =========================
+#Menu Principal
 
 def menu():
     while True:
         print("""
-==== MINI RPG ====
+===== Mini RPG =====
 1 - Ver monstros
 2 - Batalhar
 3 - Adicionar monstro
 4 - Sair
 """)
-        opcao = input("Escolha: ")
+        opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
             monstro = listar_monstros()
@@ -120,9 +107,7 @@ def menu():
         else:
             print("Opção inválida!")
 
-# =========================
-# EXECUTAR
-# =========================
+#Executar
 
 if __name__ == "__main__":
     menu()
