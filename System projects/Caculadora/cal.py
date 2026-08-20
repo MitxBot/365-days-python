@@ -4,7 +4,7 @@ import tkinter as tk
 
 janela = tk.Tk()
 janela.title("Calculadora")
-janela.geometry("300x400")
+janela.geometry("335x400")
 janela.resizable(False,False)
 
 #Variável que guarda o que aparece no visor
