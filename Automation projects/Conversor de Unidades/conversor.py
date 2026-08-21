@@ -7,7 +7,7 @@ def milhas_para_km(milhas):
     return milhas * FATOR_CONVERSAO
 
 while True:
-    print("\n=== Conversor de Unidades ===")
+    print("\n===== Conversor de Unidades =====")
     print("1 - Quilômetros > Milhas")
     print("2 - Milhas > Quilômetros")
     print("3 - Sair")
@@ -33,8 +33,8 @@ while True:
             print("Digite um número válido!")
 
     elif opcao == "3":
-        print("\nPrograma encerrado.")
+        print("\nEncerrando o programa...")
         break
 
     else:
-        print("Opção inválida!")
+        print("Erro,Opção inválida!")

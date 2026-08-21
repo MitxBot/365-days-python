@@ -13,6 +13,6 @@ driver.find_element(By.NAME,"idade").send_keys("00")#Idade do usuário
 
 driver.find_element(By.TAG_NAME,"button").click
 
-print("Formulário enviado!")
+print("Formulário enviado com sucesso!")
 
 driver.quit()

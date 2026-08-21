@@ -21,4 +21,4 @@ for arquivo in PASTA_ENTRADA.glob("*.csv"):
     except Exception as e:
         print(f"Erro em {arquivo.name}: {e}")
 
-print("Conversão concluída!")
+print("Conversão concluída com sucesso!")

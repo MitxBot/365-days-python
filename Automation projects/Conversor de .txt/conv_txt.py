@@ -2,8 +2,8 @@ from pathlib import Path
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
-entrada = Path(r"")#Pasta de entrada
-saida = Path(r"")#Pasta de saida
+entrada = Path(r"")
+saida = Path(r"")
 
 saida.mkdir(parents=True,exist_ok=True)
 
