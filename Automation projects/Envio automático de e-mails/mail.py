@@ -5,7 +5,7 @@ from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
 
-#Carrega variáveis do .env
+#Carrega Variáveis do .env
 
 load_dotenv()
 
