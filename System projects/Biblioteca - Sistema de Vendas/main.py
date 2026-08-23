@@ -11,3 +11,15 @@ from services import (
 )
 
 def ler_float(mensagem):
+
+    while True:
+        try:
+            valor = float(input(mensagem).replace(",","."))
+
+            if valor < 0:
+                raise ValueError
+
+            return valor
+
+        except ValueError:
+            print("Digite um número válido.")
