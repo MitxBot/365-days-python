@@ -23,3 +23,17 @@ def ler_float(mensagem):
 
         except ValueError:
             print("Digite um número válido.")
+
+def ler_int(mensagem,minimo=None):
+
+    while True:
+        try:
+            valor = int(input(mensagem))
+
+            if minimo is not None and valor < minimo:
+                raise ValueError
+
+            return valor
+
+        except ValueError:
+            print("Digite um número inteiro válido.")
