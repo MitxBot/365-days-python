@@ -60,3 +60,29 @@ def cadastrar_livro_menu():
     )
 
     print("Livro cadastrado com sucesso!")
+
+def listar_livross_menu():
+
+    print("===== Livros =====")
+
+    livros = listar_livros()
+
+    if not livros:
+        print("Nenhum livro encontrado.")
+        return
+
+    for livro in livros:
+
+        livro_id = livro[0]
+        titulo = livro[1]
+        autor = livro[2]
+        preco = livro[3]
+        estoque = livro[4]
+
+        print(
+            f"[{livro_id}]"
+            f"{titulo} |"
+            f"Autor: {autor} |"
+            f"R$ {preco:.2f} |"
+            f"Estoque: {estoque}"
+        )
