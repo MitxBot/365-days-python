@@ -37,3 +37,26 @@ def ler_int(mensagem,minimo=None):
 
         except ValueError:
             print("Digite um número inteiro válido.")
+
+def cadastrar_livro_menu():
+
+    print("\n===== Cadastrar Livro =====")
+
+    titulo = input("Título: ").strip()
+    autor = input("Autor: ").strip()
+
+    preco = ler_float("Preço R$: ")
+    estoque = ler_int("Quantidade em estoque: ",0)
+
+    if not titulo or not autor:
+        print("Título e autor são obrigatórios.")
+        return
+
+    cadastrar_livro(
+        titulo,
+        autor,
+        preco,
+        estoque
+    )
+
+    print("Livro cadastrado com sucesso!")
