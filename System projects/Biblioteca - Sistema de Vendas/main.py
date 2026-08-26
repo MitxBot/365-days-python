@@ -108,3 +108,25 @@ def cadastrar_cliente_menu():
 
     except Exception:
         print("Não foi possível cadastrar o cliente.")
+
+def listar_cliente_meun():
+
+    print("===== Clientes =====")
+
+    clientes = listar_clientes()
+
+    if not clientes:
+        print("Nenhum cliente cadastrado.")
+        return
+
+    for cliente in clientes:
+
+        cliente_id = cliente[0]
+        nome = cliente[1]
+        email = cliente[3]
+
+        print(
+            f"[{cliente_id}]"
+            f"{nome} |"
+            f"{email or 'Sem e-mail'}"
+        )
