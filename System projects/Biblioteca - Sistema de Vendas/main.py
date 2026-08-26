@@ -86,3 +86,25 @@ def listar_livross_menu():
             f"R$ {preco:.2f} |"
             f"Estoque: {estoque}"
         )
+
+def cadastrar_cliente_menu():
+
+    print("\n===== Cadastrar Cliente =====")
+
+    nome = input("Nome: ").strip()
+    email = input("E-mail: ").strip()
+
+    if not nome:
+        print("O nome é obrigatório.")
+        return
+
+    try:
+        cadastrar_cliente(
+            nome,
+            email or None
+        )
+
+        print("Cliente cadastrado com sucesso!")
+
+    except Exception:
+        print("Não foi possível cadastrar o cliente.")
