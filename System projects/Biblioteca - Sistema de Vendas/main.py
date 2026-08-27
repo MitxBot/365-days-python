@@ -147,3 +147,12 @@ def realizar_venda_menu():
         if cliente_input
         else None
     )
+
+    itens = []
+
+    while True:
+
+        livro_input = input(
+            "ID do Livro: "
+            "(Enter para finalizar): "
+        ).strip()
