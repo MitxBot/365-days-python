@@ -61,7 +61,7 @@ def cadastrar_livro_menu():
 
     print("Livro cadastrado com sucesso!")
 
-def listar_livross_menu():
+def listar_livros_menu():
 
     print("===== Livros =====")
 
@@ -109,7 +109,7 @@ def cadastrar_cliente_menu():
     except Exception:
         print("Não foi possível cadastrar o cliente.")
 
-def listar_cliente_meun():
+def listar_cliente_menu():
 
     print("===== Clientes =====")
 
@@ -130,3 +130,20 @@ def listar_cliente_meun():
             f"{nome} |"
             f"{email or 'Sem e-mail'}"
         )
+
+def realizar_venda_menu():
+
+    print("\n===== Nova Venda =====")
+
+    listar_livros()
+
+    cliente_input = input(
+        "\nID do cliente: "
+        "(Enter para venda sem cliente): "
+    ).strip()
+
+    cliente_id = (
+        int(cliente_input)
+        if cliente_input
+        else None
+    )
