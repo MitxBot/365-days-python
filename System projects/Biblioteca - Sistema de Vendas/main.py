@@ -156,3 +156,54 @@ def realizar_venda_menu():
             "ID do Livro: "
             "(Enter para finalizar): "
         ).strip()
+
+        if not livro_input:
+            break
+
+        livro_id = int(livro_input)
+
+        livro = buscar_livro(livro_id)
+
+        if not livro:
+            print("Livro não encontrado.")
+            continue
+
+        quantidade = ler_int(
+            "Quantidade: ",
+            1
+        )
+
+        itens.append({
+            "livro_id" : livro_id,
+            "quantidade" : quantidade
+        })
+
+        print(
+            f"Adicionado: "
+            f"{livro[1]} x {quantidade}"
+        )
+
+        if not itens:
+            print(
+                "Venda cancelada: "
+                "nenhum item informado"
+            )
+            return
+
+        try:
+            venda_id,total = registrar_venda(
+                cliente_id,
+                itens
+            )
+
+            print(
+                f"\nVenda #{venda_id} "
+                "registrada com sucesso!"
+            )
+
+            print(
+                "Total: R${total:.2f}"
+            )
+
+        except ValueError as erro:
+            print(f"Erro: {erro}")
