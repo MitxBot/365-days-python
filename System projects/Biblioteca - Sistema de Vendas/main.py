@@ -207,3 +207,27 @@ def realizar_venda_menu():
 
         except ValueError as erro:
             print(f"Erro: {erro}")
+
+def listar_vendas_menu():
+
+    print("===== Histórico de Vendas =====")
+
+    vendas = listar_vendas()
+
+    if not vendas:
+        print("Nenhuma venda registrada.")
+        return
+
+    for venda in vendas:
+
+        venda_id = venda[0]
+        cliente = venda[1]
+        data = venda[3]
+        total = venda[4]
+
+        print(
+            f"[Venda #{venda_id}]"
+            f"{data} |"
+            f"Cliente: {cliente} |"
+            f"Total: R${total:.2f}"
+        )
