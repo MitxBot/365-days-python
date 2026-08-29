@@ -231,3 +231,8 @@ def listar_vendas_menu():
             f"Cliente: {cliente} |"
             f"Total: R${total:.2f}"
         )
+
+
+def detalhes_vendas_menu():
+
+    print("\n===== Detalhes da Venda =====")
