@@ -236,3 +236,10 @@ def listar_vendas_menu():
 def detalhes_vendas_menu():
 
     print("\n===== Detalhes da Venda =====")
+
+    venda_id = ler_int(
+        "ID da Venda",
+        1
+    )
+
+    itens = detalhes_venda(venda_id)
