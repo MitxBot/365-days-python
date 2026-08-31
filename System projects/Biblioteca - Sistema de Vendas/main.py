@@ -251,3 +251,16 @@ def detalhes_vendas_menu():
         )
 
         return
+
+    for item in itens:
+        titulo = item[0]
+        quantidade = item[1]
+        preco = item[2]
+        subtotal = item[3]
+
+        print(
+            f"{titulo} |"
+            f"{quantidade} x |"
+            f"R$ {preco:.2f} |"
+            f"Subtotal R$: {subtotal:.2f}"
+        )
