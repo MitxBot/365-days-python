@@ -243,3 +243,11 @@ def detalhes_vendas_menu():
     )
 
     itens = detalhes_venda(venda_id)
+
+    if not itens:
+        print(
+            "Venda não encontrada"
+            "ou sem itens."
+        )
+
+        return
