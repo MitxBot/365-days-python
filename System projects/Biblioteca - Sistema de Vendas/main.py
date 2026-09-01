@@ -264,3 +264,64 @@ def detalhes_vendas_menu():
             f"R$ {preco:.2f} |"
             f"Subtotal R$: {subtotal:.2f}"
         )
+
+def menu():
+
+    while True:
+        print("""
+========================================
+            Sistema de Vendas
+========================================
+
+1 - Cadastrar livro
+2 - Listar livros
+3 - Cadastrar cliente
+4 - Listar clientes
+5 - Realizar venda
+6 - Histórico de vendas
+7 - Detalhes de uma venda
+0 - Sair
+
+========================================
+""")
+
+        opcao = input("Digite uma opção: ")
+
+        try:
+            if opcao == "1":
+                cadastrar_livro_menu()
+
+            elif opcao == "2":
+                listar_livros_menu()
+
+            elif opcao == "3":
+                cadastrar_cliente_menu()
+
+            elif opcao == "4":
+                listar_cliente_menu()
+
+            elif opcao == "5":
+                realizar_venda_menu()
+
+            elif opcao == "6":
+                realizar_venda_menu()
+
+            elif opcao == "7":
+                detalhes_vendas_menu()
+
+            elif opcao == "0":
+                print("Encerrando o programa...")
+                break
+
+            else:
+                print("Opção inválida!")
+
+        except ValueError:
+            print(
+                "Entrada inválida."
+                "Tente novamente."
+            )
+
+if __name__ == "__main__":
+    inicializar_banco()
+    menu()
