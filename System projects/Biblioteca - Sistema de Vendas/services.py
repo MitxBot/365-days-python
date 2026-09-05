@@ -34,3 +34,23 @@ def listar_livro():
     conexao.close()
 
     return livros
+
+def buscar_livros(livro_id):
+
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        """
+        SELECT id, titulo, autor, preco, estoque
+        FROM livros
+        WHERE id = ?
+        """,
+        (livro_id,)
+    )
+
+    livro = cursor.fetchone()
+
+    conexao.close()
+
+    return livro
