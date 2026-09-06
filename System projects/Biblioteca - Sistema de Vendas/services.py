@@ -54,3 +54,19 @@ def buscar_livros(livro_id):
     conexao.close()
 
     return livro
+
+def cadastrar_cliente(nome,email):
+
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        """
+        INSERT INTO clientes (nome, email)
+        VALUES (?, ?)
+        """,
+        (nome,email)
+    )
+
+    conexao.commit()
+    conexao.close()
