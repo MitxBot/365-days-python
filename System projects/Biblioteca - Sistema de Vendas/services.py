@@ -70,3 +70,23 @@ def cadastrar_cliente(nome,email):
 
     conexao.commit()
     conexao.close()
+
+def listar_cliente():
+
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        """
+        SELECT id, nome, email
+        FROM clientes
+        ORDER BY nome
+
+        """
+    )
+
+    clientes = cursor.fetchall()
+
+    conexao.close()
+
+    return clientes
