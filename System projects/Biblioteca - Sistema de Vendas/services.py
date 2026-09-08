@@ -235,3 +235,32 @@ def listar_vendas():
     conexao.close()
 
     return vendas
+
+def detalhes_venda(venda_id):
+
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        """
+        SELECT
+            livros.titulo,
+            itens_venda.quantidade,
+            itens_venda.preco_unitario,
+            itens_venda.subtotal
+
+        FROM itens_venda
+
+        JOIN livros
+        ON livros.id = itens_venda.livro_id
+
+        WHERE itens_venda.venda_id = ?
+        """,
+        (venda_id,)
+    )
+
+    itens = cursor.fetchall()
+
+    conexao.close()
+
+    return itens
