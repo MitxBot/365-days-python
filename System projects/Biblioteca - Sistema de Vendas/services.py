@@ -207,3 +207,31 @@ def registrar_venda(cliente_id,itens):
 
     finally:
         conexao.close()
+
+def listar_vendas():
+
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        """
+        SELECT
+            vendas.id,
+            clientes.nome,
+            vendas.data,
+            vendas.total
+
+        FROM vendas
+
+        LEFT JOIN clientes
+        ON clientes.id = vendas.cliente_id
+
+        ORDER BY vendas.id DESC
+        """
+    )
+
+    vendas = cursor.fetchall()
+
+    conexao.close()
+
+    return vendas
