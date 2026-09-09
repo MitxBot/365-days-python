@@ -16,7 +16,7 @@ def cadastrar_livro(titulo,autor,preco,estoque):
     conexao.commit()
     conexao.close()
 
-def listar_livro():
+def listar_livros():
 
     conexao = conectar()
     cursor = conexao.cursor()
@@ -35,7 +35,7 @@ def listar_livro():
 
     return livros
 
-def buscar_livros(livro_id):
+def buscar_livro(livro_id):
 
     conexao = conectar()
     cursor = conexao.cursor()
@@ -71,7 +71,7 @@ def cadastrar_cliente(nome,email):
     conexao.commit()
     conexao.close()
 
-def listar_cliente():
+def listar_clientes():
 
     conexao = conectar()
     cursor = conexao.cursor()
