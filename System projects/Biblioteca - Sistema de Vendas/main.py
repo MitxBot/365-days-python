@@ -22,7 +22,7 @@ def ler_float(mensagem):
             return valor
 
         except ValueError:
-            print("Digite um número válido.")
+            print("Digite um número válido!")
 
 def ler_int(mensagem,minimo=None):
 
@@ -68,7 +68,7 @@ def listar_livros_menu():
     livros = listar_livros()
 
     if not livros:
-        print("Nenhum livro encontrado.")
+        print("Nenhum livro encontrado!")
         return
 
     for livro in livros:
@@ -92,7 +92,7 @@ def cadastrar_cliente_menu():
     print("\n===== Cadastrar Cliente =====")
 
     nome = input("Nome: ").strip()
-    email = input("E-mail: ").strip()
+    email = input("e-mail: ").strip()
 
     if not nome:
         print("O nome é obrigatório.")
@@ -116,7 +116,7 @@ def listar_cliente_menu():
     clientes = listar_clientes()
 
     if not clientes:
-        print("Nenhum cliente cadastrado.")
+        print("Nenhum cliente cadastrado!")
         return
 
     for cliente in clientes:
@@ -165,7 +165,7 @@ def realizar_venda_menu():
         livro = buscar_livro(livro_id)
 
         if not livro:
-            print("Livro não encontrado.")
+            print("Livro não encontrado!")
             continue
 
         quantidade = ler_int(
@@ -270,7 +270,7 @@ def menu():
     while True:
         print("""
 ========================================
-            Sistema de Vendas
+            Sistema de Venda
 ========================================
 
 1 - Cadastrar livro
