@@ -27,3 +27,23 @@ def listar_tarefa():
         status = "Completo" if tarefa["concluida"] else ""
 
         print(f"{i}. [{status}] {tarefa['nome']}")
+
+def concluir_tarefa():
+
+    listar_tarefa()
+
+    if not tarefas:
+        return
+
+    try:
+        numero = int(input("Digite o número da tarefa."))
+
+        if 1 <= numero <= len(tarefas):
+            tarefas[numero-1]["concluida"]=True
+            print("Tarefa concluída!")
+
+        else:
+            print("Número inválido!")
+
+    except ValueError:
+        print("Digite um número válido.")
