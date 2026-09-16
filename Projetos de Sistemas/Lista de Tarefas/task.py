@@ -67,3 +67,36 @@ def remover_tarefa():
 
     except ValueError:
         print("Digite um número válido.")
+
+def menu():
+
+    while True:
+        print("\n===== Lista de Tarefas =====")
+        print("1 - Adicionar tarefa")
+        print("2 - Listar tarefas")
+        print("3 - Concluir tarefa")
+        print("4 - Remover tarefa")
+        print("5 - Sair")
+
+        opcao = input("\nDigite uma opção: ")
+
+        if opcao == "1":
+            adicionar_tarefa()
+
+        elif opcao == "2":
+            listar_tarefa()
+
+        elif opcao == "3":
+            concluir_tarefa()
+
+        elif opcao == "4":
+            remover_tarefa()
+
+        elif opcao == "5":
+            print("Encerrando o programa...")
+            break
+
+        else:
+            print("Erro,opção inválida!")
+
+menu()
