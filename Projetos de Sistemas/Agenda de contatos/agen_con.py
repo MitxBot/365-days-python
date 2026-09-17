@@ -1,7 +1,7 @@
 agenda = []
 
 def adicionar_contato():
-    print("\n=== Adicionar Contato ===")
+    print("\n===== Adicionar Contato =====")
 
     nome = input("Nome: ")
     contato = input("Contato: ")
