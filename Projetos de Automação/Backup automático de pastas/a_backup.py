@@ -35,4 +35,4 @@ while len(backups) > 5:
     backups[0].unlink()
     backups.pop(0)
 
-print("Backup concluído")
+print("Backup concluído com sucesso!")
