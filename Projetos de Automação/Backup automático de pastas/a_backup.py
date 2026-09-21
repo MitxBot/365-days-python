@@ -30,12 +30,12 @@ with ZipFile(arquivo_zip,"w") as zipf:
 #Procura todos os backups existentes na pasta de backup
 backups = sorted(
     PASTA_BACKUP.glob("backup_*.zip"),
-    key=lambda x: x.stat().st_mtime
+    key=lambda x: x.stat().st_mtime #Ordena os arquivos pela data de modificação, o backup mais antigo ficará primeiro
 )
 
 #Mantém até 5 backups
 while len(backups) > 5:
-    backups[0].unlink()
-    backups.pop(0)
+    backups[0].unlink() #Apaga o backup mais antigo
+    backups.pop(0) #Remove o backup apagado da lista
 
 print("Backup concluído com sucesso!")
