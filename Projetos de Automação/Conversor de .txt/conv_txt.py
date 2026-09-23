@@ -25,7 +25,3 @@ for arquivo in entrada.glob("*.txt"):
     ])
 
     print(f"{arquivo.name} foi convertido para PDF.")
-
-"""
-O script converte todos arquivos .txt de uma determinada pasta para .pdf
-"""
