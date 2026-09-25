@@ -1,8 +1,10 @@
-FATOR_CONVERSAO = 1.60934
+FATOR_CONVERSAO = 1.60934 #Quantos quilômetros existem em 1 milha
 
+#Função que converte quilômetros para milhas
 def km_para_milhas(km):
     return km / FATOR_CONVERSAO
 
+#Função que converte milhas para quilômetros
 def milhas_para_km(milhas):
     return milhas * FATOR_CONVERSAO
 
